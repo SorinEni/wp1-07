@@ -1,5 +1,7 @@
-<?php
-$age = 158;
+  <?php
+$entryfee;
+$age = "13";
+$height = "158";
 
 
 
@@ -12,18 +14,23 @@ $age = 158;
     <title>Document</title>
 </head>
 <body>
-    <?php
-    if (($age <= 15) || ($age >= 65)) {
-        $entryFee = 50;
-    }   else {
-        $entryFee = 100;
-    }
 
+<?php
+    if (($height <= 140) && ($age <= 10) || ($age >= 65)) {
+    $entryfee = 60;
+}
+    elseif (($height >= 140) && ($age <= 10)) {
+    $entryfee = 60;
+}
+    elseif (($age >= 15) && ($age <= 26)) {
+    $entryfee = 80;
+}
+    else {
+    $entryfee = 120;
+}
+?>
 
-
-    ?>
-    <p> Jelikož ti je <?= $age ?>, zaplatíš <?= $entryFee?> </p>
-
+<p> Protože ti je <?= $age ?> musíš zaplatit <?= $entryfee ?> kč. </p>
 
 </body>
 </html>
